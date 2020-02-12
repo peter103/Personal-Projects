@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2D Platform Game.CSharp.Plugins", "2D Platform Game.CSharp.Plugins.csproj", "{25B2AB6C-2064-666A-6341-B8B500AD9061}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2D Platform Game.CSharp", "2D Platform Game.CSharp.csproj", "{2F1298A5-0E70-CEAB-0150-6C1862DB9A17}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{25B2AB6C-2064-666A-6341-B8B500AD9061}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25B2AB6C-2064-666A-6341-B8B500AD9061}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25B2AB6C-2064-666A-6341-B8B500AD9061}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25B2AB6C-2064-666A-6341-B8B500AD9061}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F1298A5-0E70-CEAB-0150-6C1862DB9A17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F1298A5-0E70-CEAB-0150-6C1862DB9A17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F1298A5-0E70-CEAB-0150-6C1862DB9A17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F1298A5-0E70-CEAB-0150-6C1862DB9A17}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
