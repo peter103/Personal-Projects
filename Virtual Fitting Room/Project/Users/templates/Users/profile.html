@@ -1,0 +1,44 @@
+{% extends "FittingRoom/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div class="content-section">
+        <form method="post" class = "center" enctype = "multipart/form-data">
+            {% csrf_token %}
+            <div class="content-section">
+                <div class="media">
+                    <img src="{{ user.profile.image.url }}" class = "rounded-circle account-img">
+                    <div class="media-body">
+                        {% if user.is_superuser %}
+                            <h2 class = "account-heading">{{ user.username }} (Administrator)</h2>
+                        {% else %}
+                            <h2 class = "account-heading">{{ user.username }}</h2>
+                        {% endif %}
+                        <p class = "text-secondary">{{ user.email }}</p>
+                    </div>
+                </div>
+                <fieldset class = "form-group">
+                    <legend class = "border-bottom mb-4">{{ user.username }}'s Profile'</legend>
+                    {{ user_form | crispy }}
+                    {{ profile_form | crispy }}
+                </fieldset>
+                <div class="form-group">
+                    <br/><button type="submit" class = "btn btn-outline-info">Update</button>
+                </div>
+                <hr>
+            </div>
+            <div style = "text-align: center;">
+                {% if user.is_superuser %}
+                    <a href="{% url 'User-Admin-Upload' %}" class = "button alt" width = 50>Upload Sample</a>
+                {% endif %}
+                <a href="{% url 'User-Upload' %}" class = "button alt" width = 50>Upload Dresses</a>
+            </div>
+            {% if not user.is_superuser %}
+            <small>
+                <br/><p>Delete account? <a href="{% url 'User-Delete-Confirmation' %}">Unsubscribe</a></p>
+            </small>
+            {% endif %}
+        </form>
+    </div>
+    <br/><br/>
+{% endblock content %}
