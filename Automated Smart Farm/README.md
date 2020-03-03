@@ -16,7 +16,7 @@ The circuit will consist of the main microcontroller of Arduino UNO to perform c
 - NPN 2N2222 Transistor
 - NE555 or 555 Timer
 - Relay Switch 
-
+- 16x2 LCD Display
 
 
 
