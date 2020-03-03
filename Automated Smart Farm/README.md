@@ -1,4 +1,4 @@
-# Automated Farm
+# Automated Smart Farm
 This project is aimed to reduce water consumption and maintain plant's health status during drought conditions by utilizing electronic sensors and computer hardware and software to mitigate this issue. 
 
 ## Conceptual Idea
