@@ -1,4 +1,4 @@
-# Automated Farm
+# Automated Smart Farm
 This project is aimed to reduce water consumption and maintain plant's health status during drought conditions by utilizing electronic sensors and computer hardware and software to mitigate this issue. 
 
 ## Conceptual Idea
@@ -16,7 +16,7 @@ The circuit will consist of the main microcontroller of Arduino UNO to perform c
 - NPN 2N2222 Transistor
 - NE555 or 555 Timer
 - Relay Switch 
-
+- 16x2 LCD Display
 
 
 
