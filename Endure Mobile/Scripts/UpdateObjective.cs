@@ -11,7 +11,6 @@ public class UpdateObjective : MonoBehaviour
 
     private CompassController compass_controller;
 
-    private bool finishObj = false;
 
 
     void Start()
