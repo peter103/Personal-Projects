@@ -4,30 +4,67 @@ using UnityEngine;
 
 public class CompassController : MonoBehaviour
 {
-	// Follows game-object in runtime using 2D Canvas 
-	
+
     public GameObject pointer;
-    public GameObject target;
+    
     public GameObject player;
+    
     public RectTransform compassLine;
+
+    public List<GameObject> objectives;
+
+    private bool next = false; 
+
     RectTransform rect;
+
+    private int size = 0;   
+
+    private int iterate = 0;
+
+    private GameObject target;
+
+
 
     void Start()
     {
         rect = pointer.GetComponent<RectTransform>();
+        size = objectives.Count; // Get the size of the list.
+
+        // The controller will always begin with element 0 or the first objective.
+
+        target = objectives[iterate];
+        iterate++;
     }
 
     void Update()
     {
 
-        Vector3[] vector_3 = new Vector3[4];
+        if (iterate < size && next)
+        {
+            target = objectives[iterate];
+            iterate++;
+            next = false;
+        }
+
+        Vector3[] v = new Vector3[4];
         compassLine.GetLocalCorners(v);
-        float pointerScale = Vector3.Distance(vector_3[1], vector_3[2]); //both bottom corners
+            
+        float pointerScale = Vector3.Distance(v[1], v[2]); //both bottom corners
 
         Vector3 direction = target.transform.position - player.transform.position;
-        float angleToTarget = Vector3.SignedAngle(player.transform.forward, direction, player.transform.up);
-		
+        
+        float angleToTarget = Vector3.SignedAngle(player.transform.forward,
+                                                                    direction,
+                                                                player.transform.up);
+
         angleToTarget = Mathf.Clamp(angleToTarget, -90, 90) / 180.0f * pointerScale;
+
         rect.localPosition = new Vector3(angleToTarget, rect.localPosition.y, rect.localPosition.z);
+        
+    }
+
+    public void GoToNextObjective()
+    {
+        next = true;
     }
 }
