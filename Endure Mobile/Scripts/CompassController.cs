@@ -23,7 +23,7 @@ public class CompassController : MonoBehaviour
 
     private GameObject target;
 
-
+    private UpdateObjective updateObj; 
 
     void Start()
     {
@@ -33,6 +33,9 @@ public class CompassController : MonoBehaviour
         // The controller will always begin with element 0 or the first objective.
 
         target = objectives[iterate];
+
+        updateObj = target.GetComponent<UpdateObjective>();
+
         iterate++;
     }
 
@@ -42,6 +45,7 @@ public class CompassController : MonoBehaviour
         if (iterate < size && next)
         {
             target = objectives[iterate];
+            updateObj = target.GetComponent<UpdateObjective>();
             iterate++;
             next = false;
         }
@@ -61,6 +65,16 @@ public class CompassController : MonoBehaviour
 
         rect.localPosition = new Vector3(angleToTarget, rect.localPosition.y, rect.localPosition.z);
         
+    }
+    public UpdateObjective getCurrentObjective()
+    {
+        return updateObj;
+    }
+
+    // Decreasing amount of intels in an objective
+    public void decrementCurrentObjective()
+    {
+        updateObj.minusIntelAmount();
     }
 
     public void GoToNextObjective()
