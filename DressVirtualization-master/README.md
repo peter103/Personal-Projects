@@ -40,6 +40,7 @@ If you don't have Linux OS then download VMware or VirtualBox and install a Linu
 * [Django](https://docs.djangoproject.com/en/3.0/) - The web framework used
 * [OpenCV](https://docs.opencv.org/4.1.2/) - Used with image modifications
 * [THREE.js](https://threejs.org/docs/) - Used for graphics and animations of the 3D model
+* [SQLite](https://www.sqlite.org/download.html) - Used for database for the website.
 
 
 ## Acknowledgments
