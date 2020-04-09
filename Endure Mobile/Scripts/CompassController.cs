@@ -42,14 +42,16 @@ public class CompassController : MonoBehaviour
     void Update()
     {
 
-        if (iterate < size && next)
-        {
-            target = objectives[iterate];
-            updateObj = target.GetComponent<UpdateObjective>();
-            iterate++;
-            next = false;
+        if(objectives != null)
+        { 
+            if (iterate < size && next)
+            {
+                target = objectives[iterate];
+                updateObj = target.GetComponent<UpdateObjective>();
+                iterate++;
+                next = false;
+            }
         }
-
         Vector3[] v = new Vector3[4];
         compassLine.GetLocalCorners(v);
             
