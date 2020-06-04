@@ -8,7 +8,7 @@ Designed an online auto parts store web app using JavaFX, CSS, and Scene Builder
 Implemented CSS themes and aesthetics in JavaFX.
 Improved overall visual aesthetics and usability compared to the original product.
 
-![ScreenShot](https://raw.github.com/peter103/Personal-Projects/blob/master/Auto%20Store%20Application/MainPage.jpg)
+![ScreenShot](https://github.com/peter103/Personal-Projects/blob/master/Auto%20Store%20Application/MainPage.jpg)
 
 
 
