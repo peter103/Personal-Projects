@@ -1,5 +1,5 @@
 # Perfect-Fit - Dress Virtualization
-This is a project for CS 4800 - Software Engineering. For this project, we created a virtual dressing room for bridal dresses. The application uses Django Web Framework along with THREE.js. We used a 3D model and overlay transparent PNG images on top of the model to give an illusion of the model wearing the dress. 
+This is a project for CS 4800 - Software Engineering. For this project, we created a virtual dressing room for dresses. The application uses Django Web Framework along with THREE.js. We used a 3D model and overlay transparent PNG images on top of the model to give an illusion of the model wearing the dress. 
 
 
 ## Getting Started
@@ -40,6 +40,7 @@ If you don't have Linux OS then download VMware or VirtualBox and install a Linu
 * [Django](https://docs.djangoproject.com/en/3.0/) - The web framework used
 * [OpenCV](https://docs.opencv.org/4.1.2/) - Used with image modifications
 * [THREE.js](https://threejs.org/docs/) - Used for graphics and animations of the 3D model
+* [SQLite](https://www.sqlite.org/download.html) - Used for database for the website.
 
 
 ## Acknowledgments
